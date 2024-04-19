@@ -15,7 +15,7 @@ class channelforward(Client):
     
     def __init__(self):
         super().__init__(
-            session_name="CHANNELFORWARD",
+            name="CHANNELFORWARD",
             bot_token = Config.BOT_TOKEN,
             api_id = Config.API_ID,
             api_hash = Config.API_HASH,
@@ -26,5 +26,5 @@ class channelforward(Client):
         )
 
 if __name__ == "__main__" :
-    channelforward.run()
+    channelforward().run()
 
