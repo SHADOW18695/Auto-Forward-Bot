@@ -1,6 +1,5 @@
 import pyrogram
 import logging
-import os
 from config import Config
 
 logging.basicConfig(level=logging.DEBUG,
@@ -13,7 +12,6 @@ class channelforward(pyrogram.Client):
     
     def __init__(self):
         super().__init__(
-            session_name="CHANNELFORWARD",
             bot_token=Config.BOT_TOKEN,
             api_id=Config.API_ID,
             api_hash=Config.API_HASH,
@@ -24,7 +22,9 @@ class channelforward(pyrogram.Client):
         )
 
 if __name__ == "__main__":
-    channelforward().run()
+    client = channelforward()
+    client.start()
+
 
 # import pyrogram
 
